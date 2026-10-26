@@ -1,25 +1,26 @@
 import Colaborador from "./Colaborador";
 
 export default class QuadroColaboradores {
-  private _colaboradores: Colaborador[];
-  protected salarioBase: number;
+    private _colaboradores: Colaborador[];
 
-  constructor(salarioBase: number = 1000) {
-    this._colaboradores = [];
-    this.salarioBase = salarioBase;
-  }
 
-  contratarColaborador(colaborador: Colaborador) {
-    this._colaboradores.push(colaborador);
-  }
+    constructor() {
+        this._colaboradores = [];
+    }
 
-  demitirColaborador(colaboradorChave: Colaborador) {
-    this._colaboradores = this._colaboradores.filter(
-      (colaborador) => colaborador !== colaboradorChave,
-    );
-  }
+    contratarColaborador(colaborador: Colaborador) {
+        this._colaboradores.push(colaborador);
+    }
 
-  get colaboradores() {
-    return this._colaboradores;
-  }
+    demitirColaborador(colaboradorChave: Colaborador) {
+        this._colaboradores = this._colaboradores.filter((colaborador) => colaborador !== colaboradorChave);
+    }
+
+    get colaboradores() {
+        return this._colaboradores;
+    }
 }
+
+
+
+
